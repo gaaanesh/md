@@ -1,0 +1,26 @@
+{
+  "name": "md-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "assert-err": "^1.1.0",
+    "bootstrap": "^4.2.1",
+    "exports-loader": "^0.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
