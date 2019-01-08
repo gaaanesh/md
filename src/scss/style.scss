@@ -1,5 +1,128 @@
-$bg-color: blue;
+@import "node_modules/bootstrap/scss/bootstrap";
 
-body {
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+// Optional
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
+
+/*$bg-color: white;*/
+/*$primary:       #FCB040 !default;*/
+/*$default:       #333333 !default;*/
+/*$green:       	#80BB01 !default;*/
+
+/*.text-dark {
+	color: $default;
+}*/
+
+/*.bg-primary {
+	background: #007bff;
+	}*/
+
+/*body {
     background: $bg-color;
+}*/ 
+
+a {
+	color: #38acf0;
+}
+.listmd {
+	background: transparent;
+	@extend .d-block;
+	@extend .p-4;
+	position: relative;
+	transition: all 0.5s;
+	.titlemd {
+		@extend .text-dark;
+	}
+	h5 {
+		@extend .text-success;
+		@extend .font-weight-bold;
+	}
+	.btn {
+		opacity: 0;
+		transition: all 0.5s;
+	}
+	&:hover {
+		text-decoration: none;
+		@extend .shadow;
+		@extend .bg-white; 
+		@extend .rounded;
+		margin-top: -5px;
+		.btn {
+			opacity: 1
+		}
+	}
+}
+
+.giftmd-banner {
+	background: url(../assets/images/gift-banner-md.jpg) right bottom no-repeat;
+	.giftmd-img {
+		text-align: left;
+		margin-top: -50px;
+		img {
+			max-width: 500px;
+		}
+	}
+}
+@media only screen and (max-width: 960px) {
+	.giftmd-banner {
+		background: none;
+		.giftmd-img {
+			text-align: center;
+		}
+	}
+}
+
+/*start mango value*/
+.giftmd-values {
+	.flex-flexmd{
+		display: flex;
+	    flex-direction: row-reverse;
+	    align-items: center;
+	}
+	
+	.giftmd-ul {
+		/*@extend .text-danger*/
+		color: darken($orange, 5%);
+	    margin: 0;
+	 	padding: 0;
+		li {
+	        list-style: none;
+		    margin: 10px 0 10px 40px;
+		    position: relative;
+		    font-size: 1.2em;
+		    &:before{
+	    	    background: url(../assets/images/bullet-icon.png) no-repeat;
+			    content: '';
+			    position: absolute;
+			    width: 30px;
+			    height: 30px;
+			    opacity: .4;
+			    left: -32px;
+			    top: -1px;
+		    }
+		}
+	}
+}
+
+
+
+
+/*Start how it works */
+.howitworks {
+	&:before {
+		position: absolute;
+	    content: '';
+	    height: 62px;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    /*background: #2d1a14;*/
+	    /*background: url(../assets/images/bg-how-it-works.png) repeat-x;*/
+	}
 }
