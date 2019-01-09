@@ -7946,12 +7946,6 @@ a {
     .giftmd-banner .giftmd-img img {
       max-width: 500px; }
 
-@media only screen and (max-width: 960px) {
-  .giftmd-banner {
-    background: none; }
-    .giftmd-banner .giftmd-img {
-      text-align: center; } }
-
 /*start mango value*/
 .giftmd-values .flex-flexmd {
   display: flex;
@@ -7988,3 +7982,11 @@ a {
   right: 0;
   /*background: #2d1a14;*/
   /*background: url(../assets/images/bg-how-it-works.png) repeat-x;*/ }
+
+@media only screen and (max-width: 960px) {
+  .giftmd-banner {
+    background: none; }
+    .giftmd-banner .giftmd-img {
+      text-align: center; }
+  .giftmd-values .flex-flexmd {
+    display: block; } }
