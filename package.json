@@ -16,6 +16,8 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
+    "gulp-build": "^0.5.3",
+    "gulp-php2html": "^0.3.3",
     "gulp-sass": "^4.0.2"
   },
   "scripts": {
