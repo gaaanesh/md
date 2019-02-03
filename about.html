@@ -7,53 +7,13 @@
 
         <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800"> -->
         <!-- <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-        <link rel="stylesheet" href="in/css/bootstrap.css">
-        <link rel="stylesheet" href="in/css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
     </head>
 
     <body>
-         <header>
-            
-            <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-                <div class="container">
-              <a class="navbar-brand" href="index.html"><img src="in/assets/images/mangodolly.png"></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="coming-soon.html">Mango Farm</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="coming-soon.html">Corporate Gifts</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about-us.html">About us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="coming-soon.html">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="btn btn-sm btn-success" href="coming-soon.html">Order</a>
-                  </li>
-                
-                  
-                </ul>
-                <!-- <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form> -->
-              </div>
-              </div>
-            </nav>
-            
-        </header>
+         <nav data-load="header.html"></nav>
         <div class="container" style="margin-top: 200px">
 
       <!-- Three columns of text below the carousel -->
@@ -91,72 +51,19 @@
 
 
  
-<footer class="page-footer font-small bg-light border-top">
+  <nav data-load="footer.html"></nav>
 
-    <!-- Footer Links -->
-    <div class="container">
-    <div class="row ">
-
-        <!-- Grid column -->
-        <div class="col-md">
-    <div class="row text-center d-flex justify-content-center pt-2 pb-2">
-
-        <div class="col-md">
-          
-            <a href="coming-soon.html" class="text-secondary">Privacy Policy</a>
-          
-        </div>
-        
-        <div class="col-md">
-          
-            <a href="coming-soon.html" class="text-secondary">Terms &amp; Conditions</a>
-          
-        </div>
-        
-        <div class="col-md">
-          
-            <a href="coming-soon.html" class="text-secondary">Contact</a>
-          
-        </div>
-        
-
-      </div>
-
-  </div>
-  <div class="col-md">
-
-          <div class="m-2 text-md-right text-center">
-
-            <!-- Facebook -->
-            <a class="fb-ic">
-              <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
-            </a>
-          </div>
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row-->
-
-      <!-- Grid row-->
-      
-      <!-- Grid row-->
-
-    </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 border-top bg-light">© 2019 Copyright:
-      <a href="http://mangodolly.in"> mangodolly.in</a>
-    </div>
-    <!-- Copyright --> 
-
-  </footer>
-
-        <script src="in/js/jquery.min.js"></script>
-        <script src="in/js/tether.min.js"></script>
-        <script src="in/js/bootstrap.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+          $(function(){
+              $("[data-load]").each(function(){
+                  $(this).load($(this).data("load"), function(){
+                  });
+              });
+          })
+        </script>
 
     </body>
 </html>
