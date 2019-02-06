@@ -9,32 +9,32 @@ var rigger      = require('gulp-rigger');
 gulp.task('sass', function() {
     return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'])
         .pipe(sass())
-        .pipe(gulp.dest("docs/css"))
+        .pipe(gulp.dest("src/css"))
         .pipe(browserSync.stream());
 });
 
-// Move the javascript files into our /docs/js folder
+// Move the javascript files into our /src/js folder
 gulp.task('js', function() {
     return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/tether/dist/js/tether.min.js'])
-        .pipe(gulp.dest("docs/js"))
+        .pipe(gulp.dest("src/js"))
         .pipe(browserSync.stream());
 });
 
 // gulp.task('image', function(cb) {
-//    var file_src = 'src/assets/images/*.*', file_dest = 'docs/assets/images/';
+//    var file_src = 'src/assets/images/*.*', file_dest = 'src/assets/images/';
 //    gulp.src(file_src).pipe(gulp.dest(file_dest)).on('end', cb).on('error', cb);
 
 // // gulp.task('image', function() {
 // //     return gulp.src(['src/assets/images/*.*'])
 // //          // .pipe(image())
-// //         .pipe(gulp.dest("docs/assets/images/"))
+// //         .pipe(gulp.dest("src/assets/images/"))
 // //         .pipe(browserSync.stream());
 // });
 
 gulp.task('rigger', function () {
       return gulp.src(['src/*.html'])
         .pipe(rigger())
-        .pipe(gulp.dest("docs")) 
+        .pipe(gulp.dest("./")) 
         // .pipe(reload({stream:true}));
         .pipe(browserSync.stream());
 });
@@ -43,12 +43,12 @@ gulp.task('rigger', function () {
 gulp.task('serve', ['sass','rigger'], function() {
 
     browserSync.init({
-        server: "./docs/"  
+        server: "./"  
     });
 
     gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'], ['sass']);
     gulp.watch(['src/*.html', 'src/*/*.html'], ['rigger']);
-    // gulp.watch(['src/assets/images/*.*', 'docs/assets/images/'], ['image']);
+    // gulp.watch(['src/assets/images/*.*', 'src/assets/images/'], ['image']);
     gulp.watch("docs").on('change', browserSync.reload);
 });
 
