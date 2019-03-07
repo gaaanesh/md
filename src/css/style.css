@@ -8044,9 +8044,9 @@ a {
 
 .card {
   margin-top: 50px;
-  background: #eee;
-  padding: 3em;
-  line-height: 1.5em; }
+  background: #fff;
+  border: 0;
+  padding: 3em; }
 
 @media screen and (min-width: 997px) {
   .wrapper {
