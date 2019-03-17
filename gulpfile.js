@@ -2,6 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var rigger      = require('gulp-rigger');
+var replace = require('gulp-token-replace');
 // var image = require('gulp-image');
 // var reload      = server.reload;
 
@@ -30,6 +31,12 @@ gulp.task('js', function() {
 // //         .pipe(gulp.dest("src/assets/images/"))
 // //         .pipe(browserSync.stream());
 // });
+gulp.task('token-replace', function(){
+  var config = require('src/config.json');
+  return gulp.src(['src/*.js', 'src/*.html'])
+    .pipe(replace({global:config}))
+    .pipe(gulp.dest('./'))
+});
 
 gulp.task('rigger', function () {
       return gulp.src(['src/*.html'])
@@ -52,4 +59,4 @@ gulp.task('serve', ['sass','rigger'], function() {
     gulp.watch("docs").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['js','serve','rigger']);
+gulp.task('default', ['js','serve','rigger','token-replace']);

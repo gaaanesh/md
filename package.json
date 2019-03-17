@@ -20,7 +20,8 @@
     "gulp-image": "^4.4.1",
     "gulp-php2html": "^0.3.3",
     "gulp-rigger": "^0.5.8",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "gulp-token-replace": "^1.1.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
