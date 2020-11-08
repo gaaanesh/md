@@ -5,22 +5,22 @@
   "main": "index.js",
   "dependencies": {
     "assert-err": "^1.1.0",
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.5.3",
     "exports-loader": "^0.7.0",
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.2",
     "gulp-connect-php": "^1.0.3",
-    "jquery": "^3.3.1",
-    "mocha": "^6.0.2",
+    "jquery": "^3.5.1",
+    "mocha": "^8.2.1",
     "popper.js": "^1.14.6",
     "should": "^13.2.3",
     "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^4.2.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.13",
     "gulp-build": "^0.5.3",
-    "gulp-image": "^4.4.1",
-    "gulp-php2html": "^0.3.3",
+    "gulp-image": "^6.2.1",
+    "gulp-php2html": "^1.0.1",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.2",
     "gulp-token-replace": "^1.1.5"
